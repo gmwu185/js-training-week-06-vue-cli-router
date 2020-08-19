@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Loading :active.sync="isLoading"></Loading>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -11,8 +12,21 @@ import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
   name: 'Home',
+  data() {
+    return {
+      isLoading: false,
+      fullPage: true,
+    };
+  },
   components: {
     HelloWorld,
+  },
+  created() {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 500);
+    console.log('this.isLoading', this.isLoading);
   },
 };
 </script>
