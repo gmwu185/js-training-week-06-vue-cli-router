@@ -23,6 +23,16 @@ const routes = [
     path: '/cart',
     component: () => import('../views/Cart.vue'),
   },
+  {
+    path: '/admin',
+    component: () => import('../views/dashboard/Dashboard.vue'),
+    children: [
+      {
+        path: 'products',
+        component: () => import('../views/dashboard/Products.vue'),
+      },
+    ],
+  },
 ];
 
 const router = new VueRouter({
