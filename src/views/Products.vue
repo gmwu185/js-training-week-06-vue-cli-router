@@ -11,5 +11,8 @@ export default {
       products: [],
     };
   },
+  created() {
+    console.log('UUID', process.env.VUE_APP_UUID);
+  },
 };
 </script>

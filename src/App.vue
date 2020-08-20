@@ -4,7 +4,10 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/products">產品列表</router-link> |
-      <router-link to="/cart">購物車</router-link>
+      <router-link to="/cart">購物車</router-link> |
+      <router-link to="/admin">後台管理頁面</router-link> |
+      <router-link to="/admin/products">後台產品列表頁面</router-link> |
+      <router-link to="/admin/coupons">後台優惠券頁面</router-link> |
     </div>
     12345
     <hr>
