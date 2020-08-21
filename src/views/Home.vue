@@ -2,7 +2,7 @@
   <div class="home">
     <Loading :active.sync="isLoading"></Loading>
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="這是頁面 (Home.vue) 裡的 HelloWord 元件"/>
   </div>
 </template>
 
