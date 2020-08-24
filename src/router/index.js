@@ -1,35 +1,39 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue'),
-  },
-  {
-    path: '/products',
-    component: () => import('../views/Products.vue'),
-  },
-  { // 動態路由
-    path: '/product/:id',
-    component: () => import('../views/Product.vue'),
-  },
-  {
-    path: '/cart',
-    component: () => import('../views/Cart.vue'),
+    component: () => import('../views/Home.vue'),
+    children: [
+      {
+        path: '', // 使用空自串自動導回父層路由
+        component: () => import('../views/front/Index.vue'),
+      },
+      {
+        path: 'about',
+        component: () => import('../views/front/About.vue'),
+      },
+      {
+        path: 'products',
+        name: '產品列表',
+        component: () => import('../views/front/Products.vue'),
+      },
+      { // 動態路由
+        path: 'product/:id',
+        component: () => import('../views/front/Product.vue'),
+      },
+      {
+        path: 'cart',
+        component: () => import('../views/front/Cart.vue'),
+      },
+    ],
   },
   {
     path: '/admin',
-    component: () => import('../views/dashboard/Dashboard.vue'),
+    component: () => import('../views/Dashboard.vue'),
     children: [
       {
         path: 'products',

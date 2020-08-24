@@ -1,14 +1,20 @@
 <template>
   <div class="home">
+    <div id="nav">
+      <router-link to="/">首頁</router-link> |
+      <router-link to="/about">關於</router-link> |
+      <router-link to="/products">產品列表</router-link> |
+      <router-link to="/cart">購物車</router-link> |
+      <router-link to="/admin">後台管理頁面</router-link>
+    </div>
     <Loading :active.sync="isLoading"></Loading>
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="這是頁面 (Home.vue) 裡的 HelloWord 元件"/>
+    <router-view/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+// import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
   name: 'Home',
@@ -18,9 +24,9 @@ export default {
       fullPage: true,
     };
   },
-  components: {
-    HelloWorld,
-  },
+  // components: {
+  //   HelloWorld,
+  // },
   created() {
     this.isLoading = true;
     setTimeout(() => {

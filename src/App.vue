@@ -1,18 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">首頁</router-link> |
-      <router-link to="/about">關於</router-link> |
-      <router-link to="/products">產品列表</router-link> |
-      <router-link to="/cart">購物車</router-link> |
-      <router-link to="/admin">後台管理頁面</router-link> |
-      <router-link to="/admin/products">後台產品列表頁面</router-link> |
-      <router-link to="/admin/coupons">後台優惠券頁面</router-link> |
-    </div>
-    12345
-    <hr>
     <router-view/>
-    67890
   </div>
 </template>
 
