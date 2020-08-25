@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/js-training-week-06-vue-router/dist/',
+  publicPath: '/js-training-week-06-vue-cli-router/dist/',
 };
